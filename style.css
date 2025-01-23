@@ -233,7 +233,6 @@ marquee{
     font-weight: bold;
     padding-top: .5rem;
     margin-top: .5rem;
-    margin-bottom: -2.5rem;
     background-color: aliceblue;
 }
 
@@ -310,7 +309,6 @@ marquee{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* padding: 3.25rem; */
     background: url(assets/bg.png), linear-gradient(0.00deg, rgba(254, 163, 1, 0.3), rgba(255, 255, 255, 0.3) 100%);
 }
 
@@ -332,7 +330,6 @@ marquee{
 #left_story {
     grid-row: span 2;
     grid-column: span 2;
-
 }
 
 .box {
@@ -518,11 +515,11 @@ marquee{
     .banner,
     footer {
         display: flex;
-        width: auto;
-        height: auto;
     }
 
     .header {
+        width: 100%;
+        margin: 0rem;
         box-sizing: border-box;
         border-bottom: 0.5px solid rgb(254, 163, 1);
     }
@@ -540,15 +537,38 @@ marquee{
     }
 
     .banner {
-        flex-direction: row-reverse;
+        display: flex;
+        flex-direction: column-reverse;
         justify-content: center;
-        align-items: baseline;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0rem;
     }
-
+   
+.content, .hero_image {
+    flex: 1 1 50%;             
+    display: flex;             
+    flex-direction: row-reverse;   
+    align-items: center;       
+    justify-content: center;   
+    text-align: center;       
+    box-sizing: border-box;    
+    padding: 10px;      
+           
+}
+    .cards{
+        height: unset;
+    }
+    .hero_image  {
+        width: 100%;       
+        height: auto; 
+        padding:0.2rem;
+    }
     .content,
     .content h1 {
         align-items: center;
         flex-wrap: wrap;
+        width: 100%;
     }
 
     .curriculam,
@@ -557,16 +577,18 @@ marquee{
         flex-direction: column;
     }
 
-    .stories {
-        display: flex;
+    .curriculam{
+        height: 100%;
     }
 
-    #left_sory {
+    #left_story {
         display: none;
     }
 
     .img_cards {
         grid-template-columns: repeat(2, 1fr);
+        height: auto;
+        width: auto;       ;
     }
 
     .footer {
@@ -594,5 +616,9 @@ marquee{
 
     .hamburger {
         display: flex; 
+        flex-direction: column;
     }
+  .img_cards{
+    width: 80%;
+  }
 }
